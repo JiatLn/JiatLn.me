@@ -1,10 +1,12 @@
 <script setup lang="ts"></script>
 
 <template>
-  <footer w-full text-center bg-brand-primary text-white flex justify="center" items-center h-40px>
-    Copyright &copy;
-    <a href="https://github.com/JiatLn/JiatLn.me" target="_blank">
-      JiatLn 2022
+  <footer w-full text-center text-gray flex="~ gap-12px" justify="center" items-center h-40px>
+    <span text-14px>
+      &copy; JiatLn 2022
+    </span>
+    <a w="20px" h="20px" href="https://github.com/JiatLn/JiatLn.me" target="_blank">
+      <div w-full h-full text="gray-600" i-carbon:logo-github />
     </a>
   </footer>
 </template>

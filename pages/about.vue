@@ -2,7 +2,7 @@
 
 <template>
   <div text-center flex="c col" h-40vh>
-    jiatln's website
+    JiatLn's website
   </div>
 </template>
 

@@ -30,14 +30,11 @@ const menuItems = ref<MenuItem[]>([
 
 <template>
   <nav flex="~ c gap-20px" h-40px text="gray-600">
-    <nuxt-link v-for="item in menuItems" :key="item.name" :to="item.to" hover="text-brand-primary" transition="all" :class="{ active: item.name === currentLink }">
+    <nuxt-link v-for="item in menuItems" :key="item.name" :to="item.to" hover="text-brand-primary" transition="all" :class="{ 'text-brand-primary': item.name === currentLink }">
       {{ item.label }}
     </nuxt-link>
   </nav>
 </template>
 
 <style scoped lang="scss">
-.active {
-  @apply text-brand-primary
-}
 </style>
