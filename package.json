@@ -1,5 +1,5 @@
 {
-  "name": "nuxt3-template",
+  "name": "jiatln.me",
   "author": {
     "name": "JiatLn",
     "email": "lne128gene980@163.com"
@@ -17,9 +17,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^0.23.1",
     "@unocss/nuxt": "^0.34.0",
-    "eslint": "^8.15.0",
-    "naive-ui": "^2.29.0",
-    "nuxt": "^3.0.0-rc.3",
-    "unplugin-vue-components": "^0.19.5"
+    "eslint": "^8.16.0",
+    "nuxt": "^3.0.0-rc.3"
   }
 }

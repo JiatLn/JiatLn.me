@@ -8,8 +8,8 @@ const data = await fn.sayHi('haha')
   <div>
     <div>这里是首页</div>
     <p>data: {{ data }}</p>
-    <n-button>naive-ui</n-button>
   </div>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+</style>
