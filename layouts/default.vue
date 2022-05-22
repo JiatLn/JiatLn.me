@@ -1,9 +1,9 @@
 <script setup lang="ts"></script>
 
 <template>
-  <main>
+  <main bg="#282c34" text-white>
     <TheNav />
-    <div min-h="[calc(100vh-80px)]">
+    <div min-h="[calc(100vh-120px)]" flex-c>
       <slot />
     </div>
     <TheFooter />

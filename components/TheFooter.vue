@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <footer w-full text-center text-gray flex="~ gap-12px" justify="center" items-center h-40px>
+  <footer w-full text-center text-gray flex="~ gap-12px" justify="center" items-center h-60px>
     <span text-14px>
       &copy; JiatLn 2022
     </span>

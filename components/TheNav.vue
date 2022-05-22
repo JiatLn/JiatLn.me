@@ -16,12 +16,12 @@ const menuItems = ref<MenuItem[]>([
     to: { name: 'index' },
   },
   {
-    label: 'Article',
+    label: 'Articles',
     name: 'article',
     to: { name: 'article' },
   },
   {
-    label: 'About',
+    label: 'About Me',
     name: 'about',
     to: { name: 'about' },
   },
@@ -29,7 +29,7 @@ const menuItems = ref<MenuItem[]>([
 </script>
 
 <template>
-  <nav flex="~ c gap-20px" h-40px text="gray-600">
+  <nav flex="~ c gap-20px" h-60px bg="#1c1e24">
     <nuxt-link v-for="item in menuItems" :key="item.name" :to="item.to" hover="text-brand-primary" transition="all" :class="{ 'text-brand-primary': item.name === currentLink }">
       {{ item.label }}
     </nuxt-link>
