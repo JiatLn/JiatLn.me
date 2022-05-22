@@ -6,7 +6,9 @@
 
 <template>
   <div h-400px>
-    <div>Hi~ I'm JiatLn.</div>
+    <div text="2xl">
+      Hi, I'm JiatLn. 👋
+    </div>
   </div>
 </template>
 
