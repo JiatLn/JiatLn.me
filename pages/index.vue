@@ -5,7 +5,7 @@
 </script>
 
 <template>
-  <div h-400px>
+  <div h-400px flex-c w-full>
     <div text="2xl">
       Hi, I'm JiatLn. 👋
     </div>

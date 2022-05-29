@@ -3,7 +3,7 @@
 <template>
   <main bg="#282c34" text-white>
     <TheNav />
-    <div min-h="[calc(100vh-120px)]" flex-c>
+    <div min-h="[calc(100vh-120px)]" flex>
       <slot />
     </div>
     <TheFooter />
