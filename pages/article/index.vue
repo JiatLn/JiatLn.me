@@ -1,5 +1,15 @@
 <script setup lang="ts">
 const { issueList } = useIssueList()
+
+const router = useRouter();
+const toDetail = (id: string) => {
+  router.push({
+    name: 'article-id',
+    params: {
+      id
+    }
+  })
+}
 </script>
 
 <template>
@@ -8,11 +18,12 @@ const { issueList } = useIssueList()
       Article list
     </div>
     <template v-if="issueList.length">
-      <div v-for="item in issueList" :key="item.id" flex="~" justify="between" items-center w="80%">
+      <div v-for="item in issueList" :key="item.id" flex="~" justify="between" items-center w="80%" mx-auto hover="bg-brand-primary" cursor="pointer" transition="all" py-4px px-8px rounded @click="toDetail(item.id)">
         <div>{{ item.title }}</div>
-        <div>{{ item.created_at }}</div>
+        <div>{{ item.created_at.slice(0, 10) }}</div>
       </div>
     </template>
+    <div v-else>Empty Data</div>
   </div>
 </template>
 
