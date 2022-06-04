@@ -17,7 +17,7 @@ export default defineConfig({
   theme: {
     colors: {
       brand: {
-        primary: '#54aeff', // used like bg-brand-primary
+        primary: '#5eead4', // used like bg-brand-primary
         light: '#80eec0', // used like bg-brand-light
       },
     },
