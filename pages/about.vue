@@ -5,9 +5,10 @@
     <div text="2xl" border-b pb-10px mb-10px>
       About me
     </div>
-    <NuxtLink :to="{ name: 'resume' }" text-brand-primary>
+    <span>todo</span>
+    <!-- <NuxtLink :to="{ name: 'resume' }" text-brand-primary>
       Resume
-    </NuxtLink>
+    </NuxtLink> -->
   </div>
 </template>
 

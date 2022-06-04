@@ -6,7 +6,7 @@ async function useGithub<T>(url: string, opts?: UseFetchOptions<unknown>): Promi
     baseURL: config.apiBase,
     ...opts,
   })
-  if (!error)
+  if (!error.value)
     return data.value as T
   else
     return [] as unknown as T
