@@ -1,4 +1,5 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+</script>
 
 <template>
   <main>
@@ -7,6 +8,9 @@
       <slot />
     </div>
     <TheFooter />
+    <ClientOnly>
+      <ThePlum />
+    </ClientOnly>
   </main>
 </template>
 

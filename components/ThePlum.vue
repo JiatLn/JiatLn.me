@@ -51,7 +51,7 @@ function drawBranch(b: Branch) {
 
 const functionStack: Function[] = []
 function step(branch: Branch, deep: number) {
-  if (deep > 80 || branch.length <= 0)
+  if (deep > 72 || branch.length <= 0)
     return
 
   const endPoint = drawBranch(branch)
@@ -81,7 +81,7 @@ function drawPlum() {
   ctx.strokeStyle = '#9ca3af'
   const b1: Branch = {
     from: { x: 0, y: height * 8 / 9 },
-    length: Math.min(20, width * 0.02),
+    length: Math.min(16, width * 0.02),
     theta: -Math.PI / 4,
   }
   const b2: Branch = {
@@ -115,7 +115,7 @@ function animationFrame() {
 </script>
 
 <template>
-  <div ref="canParentEl" fixed w-full h-full z-1 top-60px left-0 bottom-0 right-0>
+  <div ref="canParentEl" fixed w-full h-auto z--1 top-60px left-0 bottom-0 right-0>
     <canvas ref="canEl" />
   </div>
 </template>
