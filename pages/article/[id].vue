@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import MarkdownIt from 'markdown-it'
+
 const route = useRoute()
 const router = useRouter()
 
@@ -9,6 +11,12 @@ const toArticleList = () => {
   router.push({
     name: 'article',
   })
+}
+
+const markRender = (content: string) => {
+  const md = new MarkdownIt('commonmark');
+  const result = md.render(content);
+  return result
 }
 </script>
 
@@ -22,7 +30,7 @@ const toArticleList = () => {
       <h2 text="center 4xl teal-300" my-20px>
         {{ article.title }}
       </h2>
-      <div flex="c" gap-40px>
+      <div flex="c" gap-40px mb-10>
         <div flex="c" gap-10px>
           <div text="xl brand-primary" class="i-ant-design:user-outlined" />
           <span>{{ article.user.login }}</span>
@@ -32,18 +40,13 @@ const toArticleList = () => {
           <span>{{ article.created_at.slice(0, 10) }}</span>
         </div>
       </div>
-      <div flex="c" gap-20px my-20px>
-        <div v-for="label in article.labels" :key="label.id" text="gray hover:brand-primary" py-4px px-12px border rounded-10px flex-c cursor-pointer>
-          {{ label.name }}
-        </div>
-      </div>
-      <div border="~ gray-700" min-h-60vh>
-        <div v-html="article.body" />
-      </div>
+      <article class="markdown-body" p-3 border="~ gray/50" rounded-6px min-h-60vh v-html="markRender(article.body)" />
     </div>
   </div>
 </template>
 
-<style scoped lang="scss">
+<style  lang="scss">
+@import "@/styles/markdown.scss"
+
 </style>
 
