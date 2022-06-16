@@ -14,3 +14,13 @@ useHead({
     <NuxtPage />
   </NuxtLayout>
 </template>
+
+
+<style>
+html.dark {
+  color: white;
+  background-color: #282c34;
+
+  color-scheme: dark;
+}
+</style>

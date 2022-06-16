@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <main bg="#282c34" text-white>
+  <main>
     <TheNav />
     <div min-h="[calc(100vh-120px)]" flex>
       <slot />

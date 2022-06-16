@@ -78,7 +78,7 @@ function drawPlum() {
   const { width, height } = canEl.value
   const ctx = canEl.value.getContext('2d')
   ctx.clearRect(0, 0, width, height)
-  ctx.strokeStyle = '#ffffff33'
+  ctx.strokeStyle = '#9ca3af'
   const b1: Branch = {
     from: { x: 0, y: height * 8 / 9 },
     length: Math.min(20, width * 0.02),
@@ -105,7 +105,7 @@ function frame() {
 function animationFrame() {
   requestAnimationFrame(() => {
     frameCnt.value++
-    if (frameCnt.value === 4) {
+    if (frameCnt.value === 6) {
       frameCnt.value = 0
       frame()
     }
