@@ -4,7 +4,7 @@
 <template>
   <main>
     <TheNav />
-    <div min-h="[calc(100vh-120px)]" flex>
+    <div min-h="[calc(100vh-130px)]" flex>
       <slot />
     </div>
     <TheFooter />

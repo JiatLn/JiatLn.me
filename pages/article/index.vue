@@ -18,12 +18,15 @@ const toDetail = (id: number) => {
       Article list
     </div>
     <template v-if="loading || issueList.length">
-      <div v-for="item, idx in issueList" :key="item.id" flex="~" justify="between" items-center w="80%" mx-auto hover="border-red" border-b="~ gray/50 dashed" cursor="pointer" transition="all" py-4px px-8px rounded @click="toDetail(idx + 1)">
+      <div v-for="item in issueList" :key="item.id" flex="~" justify="between" items-center w="80%" mx-auto hover="border-brand-primary" border-b="~ gray/50 dashed" cursor="pointer" transition="all" py-4px px-8px rounded @click="toDetail(item.number)">
         <div>{{ item.title }}</div>
         <div>{{ item.created_at.slice(0, 10) }}</div>
       </div>
+      <div v-if="loading" flex-c h-full>
+        <div i-eos-icons:loading />
+      </div>
     </template>
-    <div v-else>
+    <div v-else text-center>
       Empty Data
     </div>
   </div>

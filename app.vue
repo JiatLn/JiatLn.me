@@ -15,11 +15,10 @@ useHead({
   </NuxtLayout>
 </template>
 
-
 <style>
 html.dark {
   color: white;
-  background-color: #282c34;
+  background-color: #1a1a1a;
 
   color-scheme: dark;
 }
