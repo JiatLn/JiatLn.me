@@ -3,7 +3,7 @@
 <template>
   <div text-center flex="c col" h-400px w-full>
     <div text="2xl" border-b pb-10px mb-10px>
-      About me
+      Projects
     </div>
     <span>TODO</span>
   </div>

@@ -4,9 +4,6 @@ import type { RouteLocationRaw } from 'vue-router'
 const route = useRoute()
 const currentLink = computed<string>(() => route.name as string)
 
-const isDark = useDark()
-const toggleDark = useToggle(isDark)
-
 interface MenuItem {
   name: string
   label: string
@@ -19,12 +16,17 @@ const menuItems = ref<MenuItem[]>([
     to: { name: 'index' },
   },
   {
-    label: 'Articles',
+    label: 'Posts',
     name: 'article',
     to: { name: 'article' },
   },
   {
-    label: 'About Me',
+    label: 'Projects',
+    name: 'project',
+    to: { name: 'project' },
+  },
+  {
+    label: 'About',
     name: 'about',
     to: { name: 'about' },
   },
@@ -38,7 +40,6 @@ const menuItems = ref<MenuItem[]>([
         {{ item.label }}
       </nuxt-link>
     </div>
-    <div i-carbon-sun dark:i-carbon-moon text="xl" cursor-pointer ml-100px @click="toggleDark()" />
   </nav>
 </template>
 

@@ -15,7 +15,7 @@ const toDetail = (id: number) => {
 <template>
   <div w="80%" max-w-900px flex="~ col" mx-auto>
     <div flex="~ c" gap-20px my-80px text="center 3xl" font-bold>
-      Article list
+      Post list
     </div>
     <template v-if="loading || issueList.length">
       <div v-for="item in issueList" :key="item.id" flex="~" justify="between" items-center w="80%" mx-auto hover="border-brand-primary" border-b="~ gray/50 dashed" cursor="pointer" transition="all" py-4px px-8px rounded @click="toDetail(item.number)">

@@ -35,7 +35,7 @@ const markRender = (content: string) => {
 </script>
 
 <template>
-  <div w="80%" max-w-900px flex="~ col" mx-auto py-10px bg="white dark:#1a1a1a">
+  <div w="80%" max-w-900px flex="~ col" mx-auto py-10px>
     <div v-if="article">
       <h2 text="center 4xl " my-20px>
         {{ article.title }}
@@ -50,7 +50,7 @@ const markRender = (content: string) => {
           <span>{{ article.created_at.slice(0, 10) }}</span>
         </div>
       </div>
-      <article class="markdown-body" p-3 mb-6 border="~ gray/50" rounded-6px min-h-60vh v-html="markRender(article.body)" />
+      <article class="markdown-body" p-3 mb-6 min-h-60vh v-html="markRender(article.body)" />
     </div>
     <div v-else flex-c h-full>
       <div i-eos-icons:loading />

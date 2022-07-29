@@ -9,7 +9,7 @@
     </div>
     <TheFooter />
     <ClientOnly>
-      <ThePlum />
+      <TheWave />
     </ClientOnly>
   </main>
 </template>
