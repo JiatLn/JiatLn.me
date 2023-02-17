@@ -7,7 +7,7 @@ const route = useRoute()
 const router = useRouter()
 
 const issueId = computed<number>(() => +route.params.id)
-const { issueDetail: article } = useIssueDetail(issueId)
+const { issueDetail: article, loading } = useIssueDetail(issueId)
 
 const toArticleList = () => {
   router.push({
@@ -52,9 +52,7 @@ const markRender = (content: string) => {
       </div>
       <article class="markdown-body" p-3 mb-6 min-h-60vh v-html="markRender(article.body)" />
     </div>
-    <div v-else flex-c h-full>
-      <div i-eos-icons:loading />
-    </div>
+    <TheLoading :loading="loading" />
     <button self-start flex-c gap-8px hover:color-brand-primary @click="toArticleList">
       <div i-fluent:arrow-step-back-16-filled />
       <span>Back</span>

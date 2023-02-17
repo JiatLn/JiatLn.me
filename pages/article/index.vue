@@ -50,10 +50,7 @@ function onLabelClick(label: ILabel) {
           </span>
         </div>
       </div>
-      <div v-if="loading" flex="c gap-8px" h="60%">
-        <div i-eos-icons:loading />
-        <span>Loading...</span>
-      </div>
+      <TheLoading :loading="loading" />
     </template>
     <div v-else text-center flex-c gap-20px>
       <div>Network Error</div>
