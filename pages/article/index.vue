@@ -27,7 +27,7 @@ const toDetail = (id: number) => {
       </div>
     </template>
     <div v-else text-center flex-c gap-20px>
-      <div>Empty Data</div>
+      <div>Network Error</div>
       <div btn hover:op-80 flex-c gap-8px @click="refresh">
         <div i-ic:round-refresh />
         <span>Retry</span>
