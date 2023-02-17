@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { issueList, loading } = useIssueList()
+const { issueList, loading, refresh } = useIssueList()
 
 const router = useRouter()
 const toDetail = (id: number) => {
@@ -26,8 +26,12 @@ const toDetail = (id: number) => {
         <div i-eos-icons:loading />
       </div>
     </template>
-    <div v-else text-center>
-      Empty Data
+    <div v-else text-center flex-c gap-20px>
+      <div>Empty Data</div>
+      <div btn hover:op-80 flex-c gap-8px @click="refresh">
+        <div i-ic:round-refresh />
+        <span>Retry</span>
+      </div>
     </div>
   </div>
 </template>
