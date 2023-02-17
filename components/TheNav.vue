@@ -34,9 +34,14 @@ const menuItems = ref<MenuItem[]>([
 </script>
 
 <template>
-  <nav flex-c w-full h-60px mb-10px shadow dark:bg="#1c1e24">
-    <div flex="c gap-40px" justify-self-center>
-      <nuxt-link v-for="item in menuItems" :key="item.name" :to="item.to" hover="text-brand-primary" transition="all" :class="{ 'text-brand-primary': item.name === currentLink }">
+  <nav class="nav" flex-c w-full h-60px border-b bg="white/75" dark:bg="#1c1e24" fixed z-9999>
+    <div flex="c gap-20px" justify-self-center>
+      <nuxt-link
+        v-for="item in menuItems" :key="item.name" :to="item.to"
+        px-2 py-1 rounded min-w-80px flex-c
+        hover="bg-brand-primary/20" transition="all"
+        :class="{ 'text-brand-primary': item.name === currentLink }"
+      >
         {{ item.label }}
       </nuxt-link>
     </div>
@@ -44,4 +49,7 @@ const menuItems = ref<MenuItem[]>([
 </template>
 
 <style scoped lang="scss">
+.nav {
+  backdrop-filter: blur(3px);
+}
 </style>

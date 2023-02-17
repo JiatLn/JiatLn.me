@@ -3,8 +3,10 @@
 
 <template>
   <main>
-    <TheNav />
-    <div min-h="[calc(100vh-130px)]" flex>
+    <div pb-60px>
+      <TheNav />
+    </div>
+    <div min-h="[calc(100vh-120px)]" flex>
       <slot />
     </div>
     <TheFooter />
