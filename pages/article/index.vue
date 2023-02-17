@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { ILabel } from '~~/types'
+
 const { issueList, loading, refresh } = useIssueList()
 
 const router = useRouter()
@@ -10,19 +12,45 @@ const toDetail = (id: number) => {
     },
   })
 }
+
+function onLabelClick(label: ILabel) {
+  const link = `https://github.com/JiatLn/JiatLn.me/labels/${label.name}`
+  window.open(link, '_blank')
+}
 </script>
 
 <template>
-  <div w="80%" max-w-900px flex="~ col" mx-auto>
-    <div flex="~ c" gap-20px my-80px text="center 3xl" font-bold>
+  <div w="80%" max-w-800px flex="~ col" mx-auto>
+    <div flex="~" gap-20px my-40px px-2 text="3xl">
       Post list
     </div>
     <template v-if="loading || issueList.length">
-      <div v-for="item in issueList" :key="item.id" flex="~" justify="between" items-center w="80%" mx-auto hover="border-brand-primary" border-b="~ gray/50 dashed" cursor="pointer" transition="all" py-4px px-8px rounded @click="toDetail(item.number)">
-        <div>{{ item.title }}</div>
-        <div>{{ item.created_at.slice(0, 10) }}</div>
+      <div v-for="item in issueList" :key="item.id" w-full flex="~ col" mx-auto mb-30px py-4px px-8px>
+        <div flex="~" justify="between" items-baseline>
+          <div
+            cp text="lg black/70"
+            hover="color-brand-primary op-80" transition="all"
+            @click="toDetail(item.number)"
+          >
+            {{ item.title }}
+          </div>
+          <div text="16px gray/90">
+            {{ item.created_at.slice(0, 10) }}
+          </div>
+        </div>
+        <div flex="~ gap-4px" mt-1>
+          <span
+            v-for="label in item.labels" :key="label.id" :title="label.name"
+            :style="{ color: `#${label.color}` }"
+            flex-c max-w-100px px-2 text="center 12px" rounded-full line-clamp-1 cp
+            hover="op-80" border="~ gray/30"
+            @click="onLabelClick(label)"
+          >
+            {{ label.name }}
+          </span>
+        </div>
       </div>
-      <div v-if="loading" flex-c h-full>
+      <div v-if="loading" flex-c h="60%">
         <div i-eos-icons:loading />
       </div>
     </template>
