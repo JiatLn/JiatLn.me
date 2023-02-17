@@ -2,9 +2,11 @@
 useHead({
   title: 'JiatLn\'s Page',
   link: [
-    {
-      rel: 'icon', type: 'image/png', href: '/icon.png',
-    },
+    { rel: 'icon', type: 'image/png', href: '/icon.png' },
+  ],
+  meta: [
+    { property: 'og:title', content: 'JiatLn' },
+    { name: 'description', content: 'JiatLn\'s Page' },
   ],
 })
 </script>
@@ -16,10 +18,5 @@ useHead({
 </template>
 
 <style>
-html.dark {
-  color: white;
-  background-color: #1a1a1a;
 
-  color-scheme: dark;
-}
 </style>

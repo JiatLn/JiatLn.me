@@ -6,6 +6,9 @@ export default defineNuxtConfig({
       apiBase: process.env.BASE_URL,
     },
   },
+  css: [
+    '~~/styles/main.scss',
+  ],
   modules: [
     '@unocss/nuxt',
     '@vueuse/nuxt',
