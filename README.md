@@ -1,42 +1,7 @@
-# Nuxt 3 Minimal Starter
+**[JiatLn.me](https://jiatln.netlify.app)**
 
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
+My personal website powered by [Nuxt3](https://nuxt.com).
 
-## Setup
+<br>
 
-Make sure to install the dependencies:
-
-```bash
-# yarn
-yarn install
-
-# npm
-npm install
-
-# pnpm
-pnpm install --shamefully-hoist
-```
-
-## Development Server
-
-Start the development server on http://localhost:3000
-
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment) for more information.
+<samp>code is licensed under <a href='./LICENSE'>MIT</a>,<br> words and images are licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a></samp>.
