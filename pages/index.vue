@@ -1,7 +1,4 @@
 <script setup lang="ts">
-// const fn = useServerFn()
-
-// const data = await fn.sayHi('haha')
 </script>
 
 <template>

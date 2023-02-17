@@ -58,4 +58,3 @@ export interface ILabel {
   default: boolean
   description: string
 }
-

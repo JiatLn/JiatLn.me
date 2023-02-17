@@ -21,7 +21,7 @@ export function useIssueList() {
 }
 
 export function useIssueDetail(issueId: Ref<number>) {
-  const issueDetail = ref<IIssue>(null)
+  const issueDetail = ref<IIssue | null>(null)
   const loading = ref(false)
   const refresh = async () => {
     loading.value = true
