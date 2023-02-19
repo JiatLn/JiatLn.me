@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { RouteLocationRaw } from 'vue-router'
+import { toggleDark } from '@/composables/useDarkMode'
 
 const route = useRoute()
 const currentLink = computed<string>(() => route.name as string)
@@ -34,7 +35,7 @@ const menuItems = ref<MenuItem[]>([
 </script>
 
 <template>
-  <nav class="nav" flex-c w-full h-60px border-b bg="white/75" dark:bg="#1c1e24" fixed z-9999>
+  <nav class="nav" flex-c w-full h-60px border-b="~ gray/30" bg="white/75" dark:bg="#1c1e24" fixed z-9999>
     <div flex="c gap-20px" justify-self-center>
       <nuxt-link
         v-for="item in menuItems" :key="item.name" :to="item.to"
@@ -45,6 +46,11 @@ const menuItems = ref<MenuItem[]>([
         {{ item.label }}
       </nuxt-link>
     </div>
+    <div
+      text="20px"
+      i-line-md:moon-filled-to-sunny-filled-loop-transition dark:i-line-md:moon-rising-filled-alt-loop cp ml-4
+      @click="() => toggleDark()"
+    />
   </nav>
 </template>
 

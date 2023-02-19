@@ -40,7 +40,7 @@ useHead({
 
 <template>
   <div w="80%" lt-sm="w-90%" max-w-900px flex="~ col" mx-auto py-10px>
-    <div v-if="article">
+    <div v-if="article" mb-60px>
       <h2 text="center 3xl" my-20px lt-sm="text-xl my-10px">
         {{ article.title }}
       </h2>
@@ -55,13 +55,15 @@ useHead({
         </div>
       </div>
       <article class="markdown-body" p-3 mb-6 min-h-60vh v-html="markRender(article.body)" />
-      <button
-        self-start flex-c gap-8px text="#000" op-50 hover="color-brand-primary op-100"
-        @click="toArticleList"
-      >
-        <div i-fluent:arrow-step-back-16-filled />
-        <span>Back..</span>
-      </button>
+      <div flex-c>
+        <button
+          self-center flex-c gap-8px text="gray/90" hover="color-brand-primary op-100"
+          @click="toArticleList"
+        >
+          <div i-fluent:arrow-step-back-16-filled />
+          <span>back</span>
+        </button>
+      </div>
     </div>
     <TheLoading :loading="loading" />
   </div>

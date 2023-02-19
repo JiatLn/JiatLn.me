@@ -1,8 +1,9 @@
 <script setup lang="ts">
+import { isDark } from '@/composables/useDarkMode'
 </script>
 
 <template>
-  <main>
+  <main dark="bg-#1c1e24">
     <div pb-60px>
       <TheNav />
     </div>
@@ -11,7 +12,7 @@
     </div>
     <TheFooter />
     <ClientOnly>
-      <TheWave />
+      <TheWave v-show="!isDark" />
     </ClientOnly>
   </main>
 </template>

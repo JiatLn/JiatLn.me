@@ -7,7 +7,7 @@
       <h1 text="4xl" font="bold sans">
         JiatLn
       </h1>
-      <div text="#555" my-2>
+      <div text="gray/70" my-2>
         Hi, I'm JiatLn. 👋<br>
         A front-end developer. I’m currently learning <span text="orange">Rust</span>.
       </div>

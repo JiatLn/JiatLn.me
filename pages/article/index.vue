@@ -20,7 +20,7 @@ function onLabelClick(label: ILabel) {
 </script>
 
 <template>
-  <div w="80% lt-sm:94%" max-w-800px flex="~ col" mx-auto>
+  <div w="80% lt-sm:94%" max-w-800px flex="~ col" mx-auto mb-60px>
     <div flex="~" gap-20px my-40px lt-sm="my-20px text-2xl" px-2 text="3xl">
       Post list
     </div>
@@ -28,7 +28,7 @@ function onLabelClick(label: ILabel) {
       <div v-for="item in issueList" :key="item.id" w-full flex="~ col" mx-auto mb-30px py-4px px-8px>
         <div flex="~" justify="between" items-baseline>
           <div
-            cp text="lg lt-sm:16px black/70" flex-1
+            cp text="lg lt-sm:16px gray" flex-1
             hover="color-brand-primary op-80" transition="all"
             @click="toDetail(item.number)"
           >
