@@ -20,21 +20,21 @@ function onLabelClick(label: ILabel) {
 </script>
 
 <template>
-  <div w="80%" max-w-800px flex="~ col" mx-auto>
-    <div flex="~" gap-20px my-40px px-2 text="3xl">
+  <div w="80% lt-sm:94%" max-w-800px flex="~ col" mx-auto>
+    <div flex="~" gap-20px my-40px lt-sm="my-20px text-2xl" px-2 text="3xl">
       Post list
     </div>
     <template v-if="loading || issueList.length">
       <div v-for="item in issueList" :key="item.id" w-full flex="~ col" mx-auto mb-30px py-4px px-8px>
         <div flex="~" justify="between" items-baseline>
           <div
-            cp text="lg black/70"
+            cp text="lg lt-sm:16px black/70" flex-1
             hover="color-brand-primary op-80" transition="all"
             @click="toDetail(item.number)"
           >
             {{ item.title }}
           </div>
-          <div text="16px gray/90">
+          <div text="16px lt-sm:12px gray/90" ml-8px>
             {{ item.created_at.slice(0, 10) }}
           </div>
         </div>
