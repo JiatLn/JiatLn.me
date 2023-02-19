@@ -35,7 +35,7 @@ function onLabelClick(label: ILabel) {
             {{ item.title }}
           </div>
           <div text="16px lt-sm:12px gray/90" ml-8px>
-            {{ item.created_at.slice(0, 10) }}
+            {{ new Date(item.created_at).toLocaleDateString() }}
           </div>
         </div>
         <div flex="~ gap-4px" mt-1>
