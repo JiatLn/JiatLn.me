@@ -1,5 +1,5 @@
 <template>
-  <div ref="canParentEl" class="wave" fixed w-full h-auto z--1 top-0 left-0 bottom-0 right-0 />
+  <div ref="canParentEl" class="wave" fixed w-full h-auto z--999 top-0 left-0 bottom-0 right-0 />
 </template>
 
 <style scoped lang="scss">
