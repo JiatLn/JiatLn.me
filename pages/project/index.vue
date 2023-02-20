@@ -1,13 +1,76 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+interface Project {
+  name: string
+  description: string
+  github: string
+  demoLink?: string
+  icon?: string
+}
+
+const projectList = ref<Project[]>([
+  {
+    name: 'vvtt',
+    description: 'VVTT is means Vite-Vue-Ts-Template :)',
+    github: 'https://github.com/JiatLn/vvtt',
+    icon: 'i-ph:package-duotone',
+  },
+  {
+    name: 'color-art',
+    description: 'A rust crate for working with colors and color spaces.',
+    github: 'https://github.com/JiatLn/color-art',
+    icon: 'i-ic:baseline-color-lens',
+  },
+  {
+    name: 'vue-fliplay',
+    description: 'A Vue 3 component, to make your list with animation if binded data update.',
+    github: 'https://github.com/JiatLn/vue-fliplay',
+    icon: 'i-material-symbols:movie-filter',
+  },
+  {
+    name: 'yys-yuhun-simulator',
+    description: '一个在线的阴阳师赌魂强魂模拟器',
+    github: 'https://github.com/JiatLn/yys-yuhun-simulator',
+    icon: 'i-fluent-emoji-high-contrast:cat-with-wry-smile',
+  },
+])
+</script>
 
 <template>
-  <div text-center flex="c col" h-400px w-full>
-    <div text="2xl" border-b pb-10px mb-10px>
-      Projects
+  <div w="80% lt-sm:94%" max-w-800px flex="~ col" mx-auto mb-60px>
+    <div my-40px>
+      <div flex="~" gap-20px mb-10px lt-sm="my-20px" text="2xl">
+        Projects
+      </div>
+      <div text="#555 dark:#bbb" font="italic" op-50>
+        List of projects that I am proud of ..
+      </div>
     </div>
-    <span>TODO</span>
+    <div class="project-grid">
+      <a
+        v-for="proj in projectList" :key="proj.name"
+        flex="~ gap-20px" items-center
+        :href="proj.github" target="_blank"
+        text="#555 dark:#bbb" rounded py2 px4 hover="bg-gray/10"
+      >
+        <div text-4xl :class="proj?.icon || 'i-carbon-unknown'" />
+        <div flex="~ col">
+          <div text="18px" mb-2>
+            {{ proj.name }}
+          </div>
+          <div text="14px gray/80" font-italic>
+            {{ proj.description }}
+          </div>
+        </div>
+      </a>
+    </div>
   </div>
 </template>
 
 <style scoped lang="scss">
+.project-grid {
+  display: grid;
+
+  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
 </style>
