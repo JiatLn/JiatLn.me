@@ -1,4 +1,7 @@
 <script setup lang="ts">
+useHead({
+  title: 'Home | JiatLn',
+})
 </script>
 
 <template>
@@ -11,7 +14,7 @@
         <h1 class="say-hi">
           Hi, I'm JiatLn.
         </h1>
-        <p>A front-end developer. I’m currently learning <span text="orange">Rust</span>.</p>
+        <p>A front-end developer. I'm currently learning <span text="orange">Rust</span>.</p>
       </div>
       <ContactMe />
       <TechStack />
