@@ -52,7 +52,8 @@ function onLabelClick(label: ILabel) {
       </div>
       <TheLoading :loading="loading" />
     </template>
-    <div v-else text-center flex-c gap-20px>
+    <div v-else text-center flex="c col" gap-20px h="60%" text="gray/80">
+      <div i-mdi:access-point-network-off text="6xl" />
       <div>Network Error</div>
       <div btn hover:op-80 flex-c gap-8px @click="refresh">
         <div i-ic:round-refresh />

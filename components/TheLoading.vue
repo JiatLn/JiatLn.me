@@ -5,9 +5,9 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div v-if="props.loading" flex="c gap-8px" h="60%">
-    <div i-eos-icons:loading />
-    <span>Loading...</span>
+  <div v-if="props.loading" flex="c col gap-30px" h="60%" select-none>
+    <div i-eos-icons:bubble-loading text="5xl" />
+    <span>loading...</span>
   </div>
 </template>
 
