@@ -33,6 +33,10 @@ const projectList = ref<Project[]>([
     icon: 'i-fluent-emoji-high-contrast:cat-with-wry-smile',
   },
 ])
+
+useHead({
+  title: 'Projects | JiatLn',
+})
 </script>
 
 <template>
@@ -53,7 +57,7 @@ const projectList = ref<Project[]>([
         text="#555 dark:#bbb" rounded py2 px4 hover="bg-gray/10"
       >
         <div text-4xl :class="proj?.icon || 'i-carbon-unknown'" />
-        <div flex="~ col">
+        <div flex="~ col 1">
           <div text="18px" mb-2>
             {{ proj.name }}
           </div>
