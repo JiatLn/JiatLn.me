@@ -1,4 +1,12 @@
 <script setup lang="ts">
+const { userInfo } = useUserInfo()
+
+function onAvatarClick() {
+  if (!userInfo.value)
+    return
+  window.open(userInfo.value.html_url, '_blank')
+}
+
 useHead({
   title: 'Home | JiatLn',
 })
@@ -7,9 +15,18 @@ useHead({
 <template>
   <main flex="~ col c" w-full>
     <div mx-auto py-10 flex="~ col gap-10px" px-8 text="16px" w-full max-w-800px relative>
-      <h1 text="4xl" font="bold sans">
-        JiatLn
-      </h1>
+      <div flex="~" items-center gap-20px>
+        <div v-if="userInfo" w-72px h-72px shadow>
+          <img
+            async :src="userInfo.avatar_url" alt="avatar" border="dashed 2px transparent"
+            hover="border-red animate-running" rounded-full w-full h-full cp transition-all
+            @click="onAvatarClick"
+          >
+        </div>
+        <h1 text="4xl" font="bold sans">
+          JiatLn
+        </h1>
+      </div>
       <div text="gray/70" font="mono" my-2>
         <h1 class="say-hi">
           Hi, I'm JiatLn.

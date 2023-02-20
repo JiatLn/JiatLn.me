@@ -9,7 +9,7 @@ export interface IIssue {
   node_id: string
   number: number
   title: string
-  user: IUser
+  user: Partial<IUser>
   labels: ILabel[]
   state: string
   locked: boolean
@@ -47,6 +47,20 @@ export interface IUser {
   received_events_url: string
   type: string
   site_admin: boolean
+  name: string
+  company: string
+  blog: string
+  location: string
+  email: any
+  hireable: any
+  bio: string
+  twitter_username: any
+  public_repos: number
+  public_gists: number
+  followers: number
+  following: number
+  created_at: string
+  updated_at: string
 }
 
 export interface ILabel {
