@@ -37,8 +37,8 @@ const projectList = ref<Project[]>([
 
 <template>
   <div w="80% lt-sm:94%" max-w-800px flex="~ col" mx-auto mb-60px>
-    <div my-40px>
-      <div flex="~" gap-20px mb-10px lt-sm="my-20px" text="2xl">
+    <div my-40px lt-sm="my-20px">
+      <div flex="~" gap-20px mb-10px text="2xl">
         Projects
       </div>
       <div text="#555 dark:#bbb" font="italic" op-50>
