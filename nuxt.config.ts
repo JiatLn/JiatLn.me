@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     '~~/styles/main.scss',
   ],
   modules: [
+    '@nuxt/devtools',
     '@unocss/nuxt',
     '@vueuse/nuxt',
   ],
