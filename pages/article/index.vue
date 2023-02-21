@@ -1,5 +1,9 @@
 <script setup lang="ts">
 const { issueList, loading, refresh } = useIssueList()
+
+useHead({
+  title: 'Posts | JiatLn',
+})
 </script>
 
 <template>
@@ -11,9 +15,11 @@ const { issueList, loading, refresh } = useIssueList()
       <ArticleList :article-list="issueList" />
       <TheLoading :loading="loading" />
     </template>
-    <div v-else text-center flex="c col" gap-20px h="60%" text="gray/80">
-      <div i-mdi:access-point-network-off text="6xl" />
-      <div>Network Error</div>
+    <div v-else text-center flex="c col" gap-20px h="60%">
+      <div i-mdi:access-point-network-off text="6xl gray/80" />
+      <div text="gray/80">
+        Network Error
+      </div>
       <div btn hover:op-80 flex-c gap-8px @click="refresh">
         <div i-ic:round-refresh />
         <span>Retry</span>

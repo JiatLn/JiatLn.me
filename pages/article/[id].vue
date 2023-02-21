@@ -44,7 +44,7 @@ useHead({
       <h2 text="center 3xl" my-20px lt-sm="text-xl my-10px">
         {{ article.title }}
       </h2>
-      <div flex="c" gap-40px mb-10px text="gray/80">
+      <div flex="c" gap-40px mb-10px>
         <div flex="c" gap-10px>
           <div text="sm brand-primary" class="i-ant-design:user-outlined" />
           <span>{{ article.user.login }}</span>
@@ -56,10 +56,7 @@ useHead({
       </div>
       <article class="markdown-body" p-3 mb-6 min-h-60vh v-html="markRender(article.body)" />
       <div flex-c>
-        <button
-          self-center flex-c gap-8px text="gray/90" hover="color-brand-primary op-100"
-          @click="toArticleList"
-        >
+        <button self-center flex-c gap-8px alink @click="toArticleList">
           <div i-fluent:arrow-step-back-16-filled />
           <span>back</span>
         </button>

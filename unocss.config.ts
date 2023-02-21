@@ -14,6 +14,7 @@ export default defineConfig({
     ['icon-btn', 'inline-block cursor-pointer select-none opacity-75 transition duration-200 ease-in-out hover:opacity-100 hover:text-brand-primary'],
     ['flex-c', 'flex items-center justify-center'],
     ['cp', 'cursor-pointer'],
+    ['alink', 'border-b border-b-dashed border-b-transparent hover:border-b-brand-primary  transition duration-300 cp hover:text-brand-primary'],
   ],
   theme: {
     colors: {

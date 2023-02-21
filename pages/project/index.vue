@@ -45,7 +45,7 @@ useHead({
       <div flex="~" gap-20px mb-10px text="2xl">
         Projects
       </div>
-      <div text="#555 dark:#bbb" font="italic" op-50>
+      <div font="italic" op-50>
         List of projects that I am proud of ..
       </div>
     </div>
@@ -54,14 +54,14 @@ useHead({
         v-for="proj in projectList" :key="proj.name"
         flex="~ gap-20px" items-center
         :href="proj.github" target="_blank"
-        text="#555 dark:#bbb" rounded py2 px4 hover="bg-gray/10"
+        rounded py2 px4 hover="bg-gray/10"
       >
         <div text-4xl :class="proj?.icon || 'i-carbon-unknown'" />
         <div flex="~ col 1">
           <div text="18px" mb-2>
             {{ proj.name }}
           </div>
-          <div text="14px gray/80" font-italic>
+          <div text="14px op-50" font-italic>
             {{ proj.description }}
           </div>
         </div>

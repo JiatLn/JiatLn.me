@@ -24,12 +24,8 @@ function onLabelClick(label: ILabel) {
 <template>
   <div v-for="article in props.articleList" :key="article.id" w-full flex="~ col" mx-auto mb-30px py-4px px-8px>
     <div flex="~" justify="between" items-baseline>
-      <div
-        cp text="lg lt-sm:16px gray" flex-1
-        hover="color-brand-primary op-80" transition="all"
-        @click="toDetail(article.number)"
-      >
-        {{ article.title }}
+      <div text="lg lt-sm:16px" flex-1>
+        <span alink @click="toDetail(article.number)">{{ article.title }}</span>
       </div>
       <div text="16px lt-sm:12px gray/90" ml-8px>
         {{ new Date(article.created_at).toLocaleDateString() }}

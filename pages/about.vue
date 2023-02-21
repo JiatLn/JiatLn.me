@@ -3,9 +3,9 @@
 <template>
   <div text-center flex="c col" h-400px w-full>
     <div text="2xl" border-b pb-10px mb-10px>
-      About me
+      About Me
     </div>
-    <span>TODO</span>
+    <span>WIP</span>
   </div>
 </template>
 

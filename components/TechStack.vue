@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div font="serif" text="gray/90 18px">
+  <div font="mono" text="16px">
     Tech Stack:
   </div>
   <div flex="~" items-center gap-20px text="30px">

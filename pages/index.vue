@@ -27,7 +27,7 @@ useHead({
           JiatLn
         </h1>
       </div>
-      <div text="gray/70" font="mono" my-2>
+      <div font="mono" my-2>
         <h1 class="say-hi">
           Hi, I'm JiatLn.
         </h1>
@@ -35,11 +35,10 @@ useHead({
       </div>
       <ContactMe />
       <TechStack />
-      <div text="gray/90" mt-1>
-        Here are some of my
-        <NuxtLink to="/article" text="brand-primary" hover="op60">
-          posts
-        </NuxtLink>.
+      <div mt-1>
+        <NuxtLink to="/article" text="brand-primary" alink>
+          Here
+        </NuxtLink> are some of my posts.
       </div>
     </div>
   </main>

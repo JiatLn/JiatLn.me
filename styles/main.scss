@@ -4,16 +4,21 @@
   --c-scrollbar-hover: #999;
 }
 
-html.dark {
-  color: white;
-  background-color: #1c1e24;
+html {
+  color: #555;
 
-  color-scheme: dark;
+  &.dark {
+    color: #bbb;
+    background-color: #1c1e24;
+
+    color-scheme: dark;
+  }
 }
+
 
 ::-webkit-scrollbar {
   width: 8px;
-  
+
 }
 
 ::-webkit-scrollbar:horizontal {
