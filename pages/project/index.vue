@@ -32,6 +32,12 @@ const projectList = ref<Project[]>([
     github: 'https://github.com/JiatLn/yys-yuhun-simulator',
     icon: 'i-fluent-emoji-high-contrast:cat-with-wry-smile',
   },
+  {
+    name: 'ri',
+    description: 'A rust version ni.',
+    github: 'https://github.com/JiatLn/ri',
+    icon: 'i-teenyicons:npm-outline',
+  },
 ])
 
 useHead({
