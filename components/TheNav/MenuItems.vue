@@ -47,7 +47,7 @@ const menuItems = ref<MenuItem[]>([
       :class="{ 'text-brand-primary': item.name === currentLink }"
     >
       <div :class="item.icon" text="xl" />
-      <span lt-sm:hidden ml-6px>{{ item.label }}</span>
+      <span lt-sm:hidden ml-6px font="mono" text="md">{{ item.label }}</span>
     </nuxt-link>
   </div>
 </template>

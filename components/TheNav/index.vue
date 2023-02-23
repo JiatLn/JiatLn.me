@@ -5,9 +5,8 @@
 <template>
   <nav
     class="nav"
-    flex-c w-full h-60px border-b="~ gray/30" bg="white/75"
-    fixed z-9999
-    dark:bg="#1c1e24"
+    flex-c w-full h-60px fixed z-9999
+    bg="white/75" dark:bg="#050505"
   >
     <TheNavMenuItems />
     <TheNavDarkModeBtn />

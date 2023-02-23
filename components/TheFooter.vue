@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <footer z--1 w-full text-white dark:op-50 flex="~ gap-12px" px-20px items-center h-60px lg="fixed bottom-0">
+  <footer z--1 w-full text-white dark:op-70 flex="~ gap-12px" px-20px items-center h-50px lg="fixed bottom-0">
     <span text="14px">
       &copy; JiatLn 2023
     </span>

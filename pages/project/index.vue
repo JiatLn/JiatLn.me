@@ -5,6 +5,7 @@ interface Project {
   github: string
   demoLink?: string
   icon?: string
+  class?: string
 }
 
 const projectList = ref<Project[]>([
@@ -38,6 +39,13 @@ const projectList = ref<Project[]>([
     github: 'https://github.com/JiatLn/ri',
     icon: 'i-teenyicons:npm-outline',
   },
+  {
+    name: 'unocss-reverse',
+    description: '[WIP] According to css attribute generated unocss value.',
+    github: 'https://github.com/JiatLn/unocss-reverse',
+    icon: 'i-logos:unocss',
+    class: 'rotate-45',
+  },
 ])
 
 useHead({
@@ -60,9 +68,9 @@ useHead({
         v-for="proj in projectList" :key="proj.name"
         flex="~ gap-20px" items-center
         :href="proj.github" target="_blank"
-        rounded py2 px4 hover="bg-gray/10"
+        rounded py2 px4 hover="bg-gray/10" transition="~ duration-300 ease-in"
       >
-        <div text-4xl :class="proj?.icon || 'i-carbon-unknown'" />
+        <div text-4xl :class="[proj?.icon || 'i-carbon-unknown', proj.class]" />
         <div flex="~ col 1">
           <div text="18px" mb-2>
             {{ proj.name }}

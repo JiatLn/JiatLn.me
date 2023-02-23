@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div font="mono" text="16px">
+  <div text="16px">
     Contact me:
   </div>
   <div flex="~ gap-16px" items-center>

@@ -3,11 +3,12 @@ import { isDark } from '@/composables/useDarkMode'
 </script>
 
 <template>
-  <main dark="bg-#1c1e24">
+  <main dark="bg-#050505">
     <div pb-60px>
       <TheNav />
     </div>
-    <div min-h="[calc(100vh-120px)]" flex>
+    <!-- 100vh - nav - footer -->
+    <div min-h="[calc(100vh-60px-50px)]" flex>
       <slot />
     </div>
     <TheFooter />

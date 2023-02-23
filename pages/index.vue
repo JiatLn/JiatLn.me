@@ -27,19 +27,20 @@ useHead({
           JiatLn
         </h1>
       </div>
-      <div font="mono" my-2>
-        <h1 class="say-hi">
+      <div my-2>
+        <h1 font="mono" class="say-hi">
           Hi, I'm JiatLn.
         </h1>
         <p>A front-end developer. I'm currently learning <span text="orange">Rust</span>.</p>
       </div>
       <ContactMe />
       <TechStack />
-      <div mt-1>
-        <NuxtLink to="/article" text="brand-primary" alink>
+      <p mt-1>
+        <NuxtLink to="/article" class="text-brand-primary" alink>
           Here
-        </NuxtLink> are some of my posts.
-      </div>
+        </NuxtLink>
+        are some of my posts.
+      </p>
     </div>
   </main>
 </template>
