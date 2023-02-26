@@ -1,4 +1,12 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const router = useRouter()
+
+onMounted(() => {
+  router.replace({
+    name: 'index',
+  })
+})
+</script>
 
 <template>
   <div text-center flex="c col" h-400px w-full>

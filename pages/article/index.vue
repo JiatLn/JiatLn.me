@@ -2,14 +2,19 @@
 const { issueList, loading, refresh } = useIssueList()
 
 useHead({
-  title: 'Posts | JiatLn',
+  title: 'Blog | JiatLn',
 })
 </script>
 
 <template>
   <div w="80% lt-sm:94%" max-w-800px flex="~ col" mx-auto mb-60px>
-    <div flex="~" gap-20px my-40px lt-sm="my-20px" px-2 text="2xl">
-      Post list
+    <div my-40px lt-sm="my-20px">
+      <div flex="~" gap-20px mb-10px text="2xl">
+        Blogs
+      </div>
+      <div font="italic" op-50>
+        List of blogs that I am writing ..
+      </div>
     </div>
     <template v-if="loading || issueList.length">
       <ArticleList :article-list="issueList" />

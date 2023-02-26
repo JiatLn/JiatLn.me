@@ -39,7 +39,7 @@ useHead({
         <NuxtLink to="/article" class="text-brand-primary" alink>
           Here
         </NuxtLink>
-        are some of my posts.
+        are some of my blogs.
       </p>
     </div>
   </main>

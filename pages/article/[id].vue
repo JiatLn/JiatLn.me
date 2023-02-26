@@ -34,7 +34,7 @@ const markRender = (content: string) => {
 }
 
 useHead({
-  title: () => `${article.value?.title || 'Post'} - JiatLn`,
+  title: () => `${article.value?.title || 'Blog'} - JiatLn`,
 })
 </script>
 
