@@ -47,7 +47,7 @@ useHead({
     <div v-if="blog" mb-60px>
       <h2 text="center 3xl" my-20px lt-sm="text-xl my-10px" flex="c">
         <span>{{ blog.title }}</span>
-        <div text="20px" alink ml-10px cp i-carbon-link @click="linkClick" title="to github issue" />
+        <div text="20px" alink ml-10px cp i-carbon-link title="to github issue" @click="linkClick" />
       </h2>
       <div flex="c" gap-40px mb-10px>
         <div flex="c" gap-10px>
