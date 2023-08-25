@@ -1,6 +1,7 @@
-**[JiatLn.me](https://jiatln.netlify.app)**
+**[JiatLn.me](https://jiatln.vercel.app)**
 
 My personal website powered by [Nuxt3](https://nuxt.com).
+UI inspired by [Antfu](https://antfu.me).
 
 <br>
 
