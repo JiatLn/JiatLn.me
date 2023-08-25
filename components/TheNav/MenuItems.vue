@@ -18,7 +18,7 @@ const menuItems = ref<MenuItem[]>([
     icon: 'i-line-md:home-md-twotone-alt',
   },
   {
-    label: 'Blog',
+    label: 'Blogs',
     name: 'article',
     to: { name: 'article' },
     icon: 'i-mdi:post-outline',
