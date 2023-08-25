@@ -17,7 +17,7 @@ useHead({
     <div mx-auto py-10 flex="~ col gap-10px" px-8 text="16px" w-full max-w-800px relative>
       <div flex="~" items-center gap-20px>
         <div v-if="userInfo" w-72px h-72px>
-          <img async :src="userInfo.avatar_url" alt="avatar" border="dashed 2px transparent" hover="border-red animate-running" rounded-full w-full h-full cp transition-all shadow title="click to github homepage" @click="onAvatarClick">
+          <img async :src="userInfo.avatar_url" alt="avatar" border="dashed 2px transparent" hover="border-brand-primary animate-running" rounded-full w-full h-full cp transition-all shadow title="click to github homepage" @click="onAvatarClick">
         </div>
         <h1 text="4xl" font="bold sans">
           JiatLn

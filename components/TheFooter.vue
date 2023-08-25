@@ -5,9 +5,9 @@
     <span text="14px">
       &copy; JiatLn 2023
     </span>
-    <a w="20px" h="20px" href="https://github.com/JiatLn" target="_blank" hover="op80">
+    <NuxtLink w="20px" h="20px" href="https://github.com/JiatLn/jiatln.me" target="_blank" hover="op80">
       <div w-full h-full i-carbon:logo-github />
-    </a>
+    </NuxtLink>
   </footer>
 </template>
 
