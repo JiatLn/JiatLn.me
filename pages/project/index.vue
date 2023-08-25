@@ -64,12 +64,7 @@ useHead({
       </div>
     </div>
     <div class="project-grid">
-      <a
-        v-for="proj in projectList" :key="proj.name"
-        flex="~ gap-20px" items-center
-        :href="proj.github" target="_blank"
-        rounded py2 px4 hover="bg-gray/10" transition="~ duration-300 ease-in"
-      >
+      <a v-for="proj in projectList" :key="proj.name" flex="~ gap-20px" items-center :href="proj.github" target="_blank" rounded py2 px4 hover="bg-gray/10" transition="~ duration-300 ease-in">
         <div text-4xl :class="[proj?.icon || 'i-carbon-unknown', proj.class]" />
         <div flex="~ col 1">
           <div text="18px" mb-2>

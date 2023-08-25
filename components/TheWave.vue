@@ -1,5 +1,5 @@
 <template>
-  <div ref="canParentEl" class="wave" fixed w-full h-auto z--999 top-0 left-0 bottom-0 right-0 />
+  <div class="wave" fixed w-full h-auto z--999 top-0 left-0 bottom-0 right-0 />
 </template>
 
 <style scoped lang="scss">
@@ -39,9 +39,11 @@
   0% {
     transform: translate(-50%, 0%) rotateZ(0deg);
   }
+
   50% {
     transform: translate(-50%, -2%) rotateZ(180deg);
   }
+
   100% {
     transform: translate(-50%, 0%) rotateZ(360deg);
   }

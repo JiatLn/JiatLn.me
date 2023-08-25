@@ -40,16 +40,12 @@ const menuItems = ref<MenuItem[]>([
 
 <template>
   <div flex="c gap-20px" justify-self-center>
-    <nuxt-link
-      v-for="item in menuItems" :key="item.name" :to="item.to" :title="item.label"
-      px-3 py-2 rounded sm:min-w-80px flex-c
-      hover="bg-brand-primary/20" transition="all"
-      :class="{ 'text-brand-primary': item.name === currentLink }"
-    >
+    <nuxt-link v-for="item in menuItems" :key="item.name" :to="item.to" :title="item.label" px-3 py-2 rounded sm:min-w-80px flex-c hover="bg-brand-primary/20" transition="all" :class="{ 'text-brand-primary': item.name === currentLink }">
       <div :class="item.icon" text="xl" />
       <span lt-sm:hidden ml-6px font="mono" text="md">{{ item.label }}</span>
     </nuxt-link>
   </div>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+</style>

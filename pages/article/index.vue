@@ -2,7 +2,7 @@
 const { issueList: blogs, loading, refresh } = useIssueList()
 
 useHead({
-  title: 'Blog | JiatLn',
+  title: 'Blogs | JiatLn',
 })
 </script>
 

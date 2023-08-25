@@ -34,7 +34,7 @@ function drawBranch(b: Branch) {
   function drawLine(line: Line) {
     if (!canEl.value)
       return
-    const ctx = canEl.value.getContext('2d')
+    const ctx = canEl.value.getContext('2d')!
     ctx.beginPath()
     ctx.moveTo(line.from.x, line.from.y)
     ctx.lineTo(line.to.x, line.to.y)
@@ -49,7 +49,7 @@ function drawBranch(b: Branch) {
   return endPoint
 }
 
-const functionStack: Function[] = []
+const functionStack: Array<() => void> = []
 function step(branch: Branch, deep: number) {
   if (deep > 72 || branch.length <= 0)
     return
@@ -73,10 +73,12 @@ function step(branch: Branch, deep: number) {
 }
 
 function drawPlum() {
+  if (!canEl.value || !canParentEl.value)
+    return
   canEl.value.width = canParentEl.value.clientWidth
   canEl.value.height = canParentEl.value.clientHeight
   const { width, height } = canEl.value
-  const ctx = canEl.value.getContext('2d')
+  const ctx = canEl.value.getContext('2d')!
   ctx.clearRect(0, 0, width, height)
   ctx.strokeStyle = '#9ca3af'
   const b1: Branch = {

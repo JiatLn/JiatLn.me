@@ -9,7 +9,7 @@ const router = useRouter()
 const issueId = computed<number>(() => +route.params.id)
 const { issueDetail: blog, loading } = useIssueDetail(issueId)
 
-const toArticleList = () => {
+function toArticleList() {
   router.push({
     name: 'article',
   })
@@ -28,7 +28,7 @@ const md = new MarkdownIt({
   },
 })
 
-const markRender = (content: string) => {
+function markRender(content: string) {
   const result = md.render(content)
   return result
 }

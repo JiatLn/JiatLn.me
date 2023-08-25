@@ -6,7 +6,7 @@ const props = defineProps<{
 }>()
 
 const router = useRouter()
-const toDetail = (id: number) => {
+function toDetail(id: number) {
   router.push({
     name: 'article-id',
     params: {
@@ -32,17 +32,12 @@ function onLabelClick(label: ILabel) {
       </div>
     </div>
     <div flex="~ gap-4px" mt-1>
-      <span
-        v-for="label in article.labels" :key="label.id" :title="label.name"
-        :style="{ color: `#${label.color}` }"
-        flex-c max-w-100px px-2 text="center 12px" rounded-full line-clamp-1 cp
-        hover="op-80" border="~ gray/30"
-        @click="onLabelClick(label)"
-      >
+      <span v-for="label in article.labels" :key="label.id" :title="label.name" :style="{ color: `#${label.color}` }" flex-c max-w-100px px-2 text="center 12px" rounded-full line-clamp-1 cp hover="op-80" border="~ gray/30" @click="onLabelClick(label)">
         {{ label.name }}
       </span>
     </div>
   </div>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+</style>
